@@ -47,7 +47,7 @@
     "redux-thunk": "^2.0.1",
     "sanitize-html": "^1.11.3",
     "slug": "^0.9.1",
-    "needle": "^0.11.0"
+    "needle": "0.11.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",

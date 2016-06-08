@@ -8,7 +8,7 @@ function PostListView(props) {
   return (
     <div className="listView">
       <ErrorsListItem />
-      
+
     </div>
   );
 }

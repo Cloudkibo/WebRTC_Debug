@@ -14,8 +14,8 @@ export function getErrors(req, res) {
   }
 
   needle.get('https://api.cloudkibo.com/getAllErrors', options, function(err, resp) {
-    console.log(err);
-    console.log(resp);
+    console.log(err + "Error*");
+    console.log(resp + "Response*");
   });
 }
 

@@ -89,6 +89,7 @@ export function fetchPosts() {
 }
 
 export function fetchErrors() {
+  console.log("Fetch error called.");
   return (dispatch) => {
     return fetch(`${baseURL}/api/getErrors`).
       then((response) => response.json()).

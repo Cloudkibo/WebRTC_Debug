@@ -27,6 +27,12 @@ const postReducer = (state = initialState, action) => {
         posts: action.posts,
         post: state.post,
       };
+      case ActionTypes.SHOW_ERRORS :
+        console.log(action);
+        return {
+          posts: action.posts,
+          post: state.post,
+      };
 
     case ActionTypes.ADD_SELECTED_POST :
       return {

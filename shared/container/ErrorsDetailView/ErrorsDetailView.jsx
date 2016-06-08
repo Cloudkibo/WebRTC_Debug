@@ -6,23 +6,10 @@ import Footer from '../../components/Footer/Footer';
 import Helmet from 'react-helmet';
 
 class ErrorDetailView extends Component {
-
-  constructor(props, context) {
-    super(props, context);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleLogoClick = this.handleLogoClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState({
-      showAddPost: true,
-    });
-  }
-
-  handleLogoClick() {
+  componentDidMount() {
     this.props.dispatch(Actions.fetchErrors());
   }
-
+  
   render() {
     return (
       <div>
@@ -32,18 +19,9 @@ class ErrorDetailView extends Component {
   }
 }
 
-ErrorDetailView.need = [(params) => {
-  return Actions.fetchErrors();
-}];
-
-ErrorDetailView.contextTypes = {
-  router: React.PropTypes.object,
-};
-
-
 function mapStateToProps(store) {
   return {
-    post: (store.post),
+    error: store.error,
   };
 }
 
